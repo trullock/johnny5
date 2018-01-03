@@ -1,11 +1,11 @@
-var Droid = require('./lib/droid.js');
+var SAINT = require('./lib/saint.js');
 var Server = require('./lib/server.js');
 
-var r2d2 = new Droid();
-var server = new Server(r2d2);
+var j5 = new SAINT();
+var server = new Server(j5);
 		
-var r2Ready = r2d2.init();
+var j5Ready = j5.init();
 
-r2Ready
-	.then(_ => r2d2.behaviour.idle())
+j5Ready
+	.then(_ => j5.behaviour.idle())
 	.then(_ => server.start());
