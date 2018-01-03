@@ -1,0 +1,28 @@
+{
+  "name": "r2d2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "r2d2.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "lame": "^1.2.4",
+    "node-aplay": "^1.0.3",
+    "pi-gpio": "0.0.8",
+    "rpi-ws281x-native": "0.8.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trullock/r2d2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trullock/r2d2/issues"
+  },
+  "homepage": "https://github.com/trullock/r2d2#readme"
+}

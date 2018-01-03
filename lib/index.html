@@ -1,0 +1,211 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			* {
+				border: 0;
+				font-family: sans-serif;
+			}
+			
+			button,
+			input + label
+			{
+				display: inline-block;
+				background: #1B1A65;
+				padding: 15px;
+				color: #fff;
+				font-weight: bold;
+				border-radius: 3px;
+				border: 1px solid #1B1A65;
+				margin: 5px;
+			}
+			
+			input[type=radio] 
+			{
+				display: none;
+			}
+			
+			input:checked + label,
+			button:active
+			{
+				background: #fff;
+				color: #1B1A65;
+			}
+			
+			legend
+			{
+				font-size: 18px;
+				font-weight: bold;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<form action="/psi/front" method="post">
+			<fieldset>
+				<legend>Front PSI</legend>
+				
+				<input type="radio" name="mode" id="rdFPSIOff" value="off" checked />
+				<label for="rdFPSIOff">Off</label>
+				
+				<input type="radio" name="mode" id="rdFPSIRed" value="red" />
+				<label for="rdFPSIRed">Red</label>
+				
+				<input type="radio" name="mode" id="rdFPSIBlue" value="blue" />
+				<label for="rdFPSIBlue">Blue</label>
+				
+				<input type="radio" name="mode" id="rdFPSIAll" value="all" />
+				<label for="rdFPSIAll">All</label>
+				
+				<input type="radio" name="mode" id="rdFPSICycleFast" value="cycleFast" />
+				<label for="rdFPSICycleFast">Cycle Fast</label>
+				
+				<input type="radio" name="mode" id="rdFPSICycleSlow" value="cycleSlow" />
+				<label for="rdFPSICycleSlow">Cycle Slow</label>
+				
+				<input type="radio" name="mode" id="rdFPSIRandom" value="random" />
+				<label for="rdFPSIRandom">Random</label>
+			</fieldset>
+		</form>
+		<form action="/psi/rear" method="post">
+			<fieldset>
+				<legend>Rear PSI</legend>
+				
+				<input type="radio" name="mode" id="rdRPSIOff" value="off" checked />
+				<label for="rdRPSIOff">Off</label>
+				
+				<input type="radio" name="mode" id="rdRPSIYellow" value="yellow" />
+				<label for="rdRPSIYellow">Yellow</label>
+				
+				<input type="radio" name="mode" id="rdRPSIGreen" value="green" />
+				<label for="rdRPSIGreen">Green</label>
+				
+				<input type="radio" name="mode" id="rdRPSIAll" value="all" />
+				<label for="rdRPSIAll">All</label>
+				
+				<input type="radio" name="mode" id="rdRPSICycleFast" value="cycleFast" />
+				<label for="rdRPSICycleFast">Cycle Fast</label>
+				
+				<input type="radio" name="mode" id="rdRPSICycleSlow" value="cycleSlow" />
+				<label for="rdRPSICycleSlow">Cycle Slow</label>
+				
+				<input type="radio" name="mode" id="rdRPSIRandom" value="random" />
+				<label for="rdRPSIRandom">Random</label>
+			</fieldset>
+		</form>
+		<form action="/logic" method="post">
+			<fieldset>
+				<legend>Logic</legend>
+				
+				<input type="radio" name="mode" id="rdLogicOff" value="off" checked />
+				<label for="rdLogicOff">Off</label>
+				
+				<input type="radio" name="mode" id="rdLogicAll" value="all" />
+				<label for="rdLogicAll">All</label>
+				
+				<input type="radio" name="mode" id="rdLogicCycleFast" value="cycleFast" />
+				<label for="rdLogicCycleFast">Cycle Fast</label>
+				
+				<input type="radio" name="mode" id="rdLogicCycleSlow" value="cycleSlow" />
+				<label for="rdLogicCycleSlow">Cycle Slow</label>
+				
+				<input type="radio" name="mode" id="rdLogicRandom" value="random" />
+				<label for="rdLogicRandom">Random</label>
+			</fieldset>
+		</form>
+		<form action="/holo" method="post">
+			<fieldset>
+				<legend>Holo</legend>
+				
+				<input type="radio" name="mode" id="rdHoloOff" value="off" checked />
+				<label for="rdHoloOff">Off</label>
+				
+				<input type="radio" name="mode" id="rdHoloAll" value="all" />
+				<label for="rdHoloAll">All</label>
+				
+				<input type="radio" name="mode" id="rdHoloCycleFast" value="cycleFast" />
+				<label for="rdHoloCycleFast">Cycle Fast</label>
+				
+				<input type="radio" name="mode" id="rdHoloCycleSlow" value="cycleSlow" />
+				<label for="rdHoloCycleSlow">Cycle Slow</label>
+				
+				<input type="radio" name="mode" id="rdHoloRandom" value="random" />
+				<label for="rdHoloRandom">Random</label>
+			</fieldset>
+		</form>
+		<form action="/speak" method="post">
+			<fieldset>
+				<legend>Speak</legend>
+				<button name="message" value="happy">Happy</button>
+				<button name="message" value="alert">Alert</button>
+			</fieldset>
+		</form>
+		<form action="/speak/volume" method="post">
+			<fieldset>
+				<button name="volume" value="25">Quiet</button>
+				<button name="volume" value="60">Med</button>
+				<button name="volume" value="100">Loud</button>
+			</fieldset>
+		</form>
+		<form action="/speak/volume" method="post">
+			<fieldset>
+				<legend>Volume</legend>
+				
+				<input type="radio" name="volume" id="rdVolQuiet" value="30" />
+				<label for="rdVolQuiet">Quiet</label>
+				
+				<input type="radio" name="volume" id="rdVolMed" value="75" />
+				<label for="rdVolMed">Medium</label>
+				
+				<input type="radio" name="volume" id="rdVolLoud" value="100" checked />
+				<label for="rdVolLoud">Loud</label>
+			</fieldset>
+		</form>
+		<form action="/behave" method="post">
+			<fieldset>
+				<legend>Behave</legend>
+				
+				<button name="mood" value="celebrate">Celebrate</button>
+				<button name="mood" value="complain">Complain</button>
+			</fieldset>
+		</form>
+		<script src="jquery-3.1.2-pre-custom.js"></script>
+		<script>
+			
+			function submitForm($form){
+				$.ajax({
+					url     : $form.attr('action'),
+					type    : $form.attr('method'),
+					dataType: 'json',
+					data    : $form.serialize(),
+				});
+			}
+		
+			$(function(){
+				
+				$('input:radio').change(function(){
+					var $form = $(this).closest('form');
+					submitForm($form);
+				});
+				
+				$('button').click(function(e){
+					e.preventDefault();
+					
+					var $this = $(this);
+					var data = {};
+					data[$this.attr('name')] = $this.val();
+					
+					var $form = $this.closest('form');
+					
+					$.ajax({
+						url     : $form.attr('action'),
+						type    : $form.attr('method'),
+						dataType: 'json',
+						data    : data
+					});
+				});
+				
+			});
+		</script>
+	</body>
+</html>
