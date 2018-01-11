@@ -8,7 +8,7 @@
     "express": "^4.15.2",
     "lame": "^1.2.4",
     "node-aplay": "^1.0.3",
-    "adafruit-i2c-pwm-driver": "0.2.1"
+    "adafruit-i2c-pwm-driver": "^0.2.1"
   },
   "devDependencies": {},
   "scripts": {
